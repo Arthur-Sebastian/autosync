@@ -39,10 +39,11 @@ INSIDE THE SYNCLIST FILE:
 5) line scheme: /remotedirectory,/localdirectory
 
 ### Launching the script
-1) First the script will print out the config information.
-2) Next, grant sudo access for samba share mounting into /remote directory.
-3) PROCEED WITH CAUTION! KEEP TRACK OF WHICH DEVICE HAS THE NEWEST COPY!
-4) The script will ask whether you want to update the server (up sync) or your local copy with data from the server (down sync). 
-5) You can also cancel the synchronisation by typing 'c' and check which copy is the newer one.
-6) The script will then proceed to copy-update the files and remove (scrub) files that have been deleted in the recently changed copy.
-7) After everything is done, the samba share will be unmounted, and script will exit. Your folders will now be synchronised!
+1) Run 'sync.sh' in a terminal.
+2) First the script will print out the config information.
+3) Next, grant sudo access for samba share mounting into /remote directory.
+4) PROCEED WITH CAUTION! KEEP TRACK OF WHICH DEVICE HAS THE NEWEST COPY!
+5) The script will ask whether you want to update the server (up sync) or your local copy with data from the server (down sync). 
+6) You can also cancel the synchronisation by typing 'c' and check which copy is the newer one.
+7) The script will then proceed to copy-update the files and remove (scrub) files that have been deleted in the recently changed copy.
+8) After everything is done, the samba share will be unmounted, and script will exit. Your folders will now be synchronised!
