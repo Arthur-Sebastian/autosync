@@ -22,6 +22,7 @@ Make frequent backups!
 ## Usage instructions:
 
 ### Configuration
+
 INSIDE THE CONFIG FILE:
 1) ip - a server adress or netBios name
 2) path - (starting with /) including samba share name pointing at synchronisation root directory (all synchronised folders must be contained within this directory)
@@ -29,6 +30,7 @@ INSIDE THE CONFIG FILE:
 4) synclist - name of the list file which will tell the scripts which folder pairs to synchronise between each other
 5) localuser - name of the local user the share will be mounted as
 6) localgroup - name of the local user group the share will be mounted for (usually the same name as user)
+
 INSIDE THE SYNCLIST FILE:
 1) fill the file according to the template in the example file:
 2) remote directory paths with respect to synchronisation root directory (see CONFIG FILE point 2)
@@ -39,7 +41,8 @@ INSIDE THE SYNCLIST FILE:
 ### Launching the script
 1) First the script will print out the config information.
 2) Next, grant sudo access for samba share mounting into /remote directory.
-3) The script will ask whether you want to update the server (up sync) or your local copy with data from the server (down sync). PROCEED WITH CAUTION! KEEP TRACK OF WHICH COPY IS THE NEWEST!
-4) You can also cancel the synchronisation by typing 'c' and check which copy is the newer one.
-5) The script will then proceed to copy-update the files and remove (scrub) files that have been deleted in the recently changed copy.
-6) After everything is done, the samba share will be unmounted, and script will exit. Your folders will now be synchronised!
+3) PROCEED WITH CAUTION! KEEP TRACK OF WHICH DEVICE HAS THE NEWEST COPY!
+4) The script will ask whether you want to update the server (up sync) or your local copy with data from the server (down sync). 
+5) You can also cancel the synchronisation by typing 'c' and check which copy is the newer one.
+6) The script will then proceed to copy-update the files and remove (scrub) files that have been deleted in the recently changed copy.
+7) After everything is done, the samba share will be unmounted, and script will exit. Your folders will now be synchronised!
