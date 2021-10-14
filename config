@@ -1,0 +1,6 @@
+ip=192.168.1.X
+path=/samba_share_name/your_synced_folders_root
+credentials=example
+synclist=example_synclist
+localuser=example_user
+localgroup=example_group
