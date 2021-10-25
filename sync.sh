@@ -69,13 +69,13 @@ done
 while IFS="," read -r remote local; do
 	case $syncdir in
 		d )	echo -e "$progname Downloading: $remote";
-			cp -ru $scriptpath/remote$remote `dirname $local`;
+			rsync -rlptu --exclude=.git $scriptpath/remote$remote `dirname $local`;
 			echo -e "$progname Scrubbing: $remote";
 			scrubDirectory;;
 			
 			
 		u )	echo -e "$progname Uploading: $local"	
-			cp -ru $local `dirname $scriptpath/remote$remote`;
+			rsync -rlptu --exclude=.git $local `dirname $scriptpath/remote$remote`;
 			echo -e "$progname Scrubbing: $local";
 			scrubDirectory;;
 	esac
