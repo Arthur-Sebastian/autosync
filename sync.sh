@@ -15,7 +15,7 @@ scrubDirectory ()
 			u )	echo -e "$ofs File: '$what' only found in remote.";
 				rm -r $where/$what;;
 		esac
-	done < <(diff -qr $scriptpath/remote$remote $local)
+	done < <(diff -qr $scriptpath/remote$remote $local -x ".*")
 	echo -e "$ofs Directory scrub complete."
 }
 
